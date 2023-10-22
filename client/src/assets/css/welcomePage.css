@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.welcome-headshot-container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-outer-circle{
+    position: absolute;
+
+    height: 40vh;
+    aspect-ratio: 1/1;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: brown; */
+}
+
+/* ANIMATIONS */
+
+@keyframes float-out-1 {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    100% {
+        left: -35%;
+        top: -25%;
+    }
+}
+@keyframes float-in-1 {
+    0% {
+        left: -35%;
+        top: -25%;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+@keyframes float-out-2 {
+    0% {
+        left: 50%;
+        top: 0;
+    }
+    100% {
+        left: 85%;
+        top: -25%;
+    }
+}
+@keyframes float-in-2 {
+    0% {
+        left: 85%;
+        top: -25%;
+    }
+    100% {
+        left: 50%;
+        top: 0;
+    }
+}
+@keyframes float-out-3 {
+    0% {
+        left: 50%;
+        top: 50%;
+    }
+    100% {
+        left: 85%;
+        top: 75%;
+    }
+}
+@keyframes float-in-3 {
+    0% {
+        left: 85%;
+        top: 75%;
+    }
+    100% {
+        left: 50%;
+        top: 50%;
+    }
+}
+@keyframes float-out-4 {
+    0% {
+        left: 0;
+        top: 50%;
+    }
+    100% {
+        left: -35%;
+        top: 75%;
+    }
+}
+@keyframes float-in-4 {
+    0% {
+        left: -35%;
+        top: 75%;
+    }
+    100% {
+        left: 0;
+        top: 50%;
+    }
+}
+
+@keyframes slide-in {
+0% {
+    transform: translate(-20%) translateY(0);
+    opacity: 0%;
+    left: -40%;
+}
+100% {
+    transform: translate(-0) translateY(0);
+    opacity: 100%;
+    left: 0%;
+}
+}
+@keyframes slide-up {
+    0% {
+        transform: translate(0, 70%) translateX(0);
+        opacity: 0%;
+    }
+    100% {
+        transform: translate(-0) translateX(0);
+        opacity: 100%;
+        left: 0%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+ /* END OF ANIMATION SECTION  */
+
+.welcome-icon-img{
+    transition-property: 1s;
+    /* animation: fade 1s; */
+    height: inherit;
+    height: 40%;
+    box-shadow: 0 0 0.75rem crimson;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 10%;
+}
+.welcome-icon-img:hover{
+    transition: .2s;
+    box-shadow: 0 0 0.90rem crimson;
+    height: 41%;
+}
+
+.welcome-q1{
+    position: absolute;
+    height: 20vh;
+    aspect-ratio: 1/1;
+    background-color: aqua;
+    border-top-left-radius: 100%;
+    border: 1px solid black;
+    transition: .4s;
+    animation: float-in-1 .5s;
+}
+.welcome-q1:focus{
+    animation: float-out-1 .5s;
+    transition: .4s;
+    left: -35%;
+    top: -25%;
+    border-radius: 50%;
+}
+
+.welcome-q2{
+    position: absolute;
+    left: 50%;
+    height: 20vh;
+    aspect-ratio: 1/1;
+    background-color:chocolate;
+    border-top-right-radius: 100%;
+    transition: .4s;
+    animation: float-in-2 .5s;
+    border: 1px solid black;
+}
+
+.welcome-q2:focus{
+    animation: float-out-2 .5s;
+    transition: .4s;
+    left: 85%;
+    top: -25%;
+    border-radius: 50%;
+}
+
+.welcome-q3{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 20vh;
+    aspect-ratio: 1/1;
+    background-color:darkgreen;
+    border-bottom-right-radius: 100%;
+    transition: .4s;
+    animation: float-in-3 .5s;
+    border: 1px solid black;
+}
+
+.welcome-q3:focus{
+    animation: float-out-3 .5s;
+    transition: .4s;
+    left: 85%;
+    top: 75%;
+    border-radius: 50%;
+}
+
+.welcome-q4{
+    position: absolute;
+    top: 50%;
+    height: 20vh;
+    aspect-ratio: 1/1;
+    background-color:hotpink;
+    border-bottom-left-radius: 100%;
+    transition: .4s;
+    animation: float-in-4 .5s;
+    border: 1px solid black;
+}
+
+.welcome-q4:focus{
+    animation: float-out-4 .5s;
+    transition: .4s;
+    left: -35%;
+    top: 75%;
+    border-radius: 50%;
+}
+
+.welcome-headshot{
+    position: absolute;    
+    height: 30vh;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.welcome-header-text{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+}
+
+.welcome-header-part-1{
+    position: relative;
+    animation: slide-in 1.5s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.welcome-header-part-2{
+    position: relative;
+    animation: slide-up 1.5s;
+    animation-delay: 2.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}

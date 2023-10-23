@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import { Header } from './components';
 import {Homepage, SecretPage, WelcomePage, ProjectsPage} from './pages';
+import "./assets/css/globalStyles.css"
 function App() {
 
   return (

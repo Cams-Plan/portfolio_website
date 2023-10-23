@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade 1.5s reverse;
 }
 .welcome-outer-circle{
     position: absolute;
@@ -135,38 +136,49 @@
 
  /* END OF ANIMATION SECTION  */
 
+
 .welcome-icon-img{
     transition-property: 1s;
     /* animation: fade 1s; */
     height: inherit;
     height: 40%;
-    box-shadow: 0 0 0.75rem crimson;
+    box-shadow: 0 0 0.75rem var(--iconShadow);
     border: 1px solid black;
     border-radius: 40px;
     padding: 10%;
 }
 .welcome-icon-img:hover{
     transition: .2s;
-    box-shadow: 0 0 0.90rem crimson;
+    box-shadow: 0 0 0.90rem var(--iconShadow);
     height: 41%;
+    cursor: pointer;
 }
 
 .welcome-q1{
     position: absolute;
     height: 20vh;
     aspect-ratio: 1/1;
-    background-color: aqua;
+    
     border-top-left-radius: 100%;
     border: 1px solid black;
     transition: .4s;
     animation: float-in-1 .5s;
 }
+
+.welcome-q1:hover{
+    transition: .7s;
+    background-color: var(--homeColor);
+    cursor: pointer;
+}
+
 .welcome-q1:focus{
     animation: float-out-1 .5s;
     transition: .4s;
     left: -35%;
     top: -25%;
     border-radius: 50%;
+    background-color: var(--homeColor);
+    cursor:default;
 }
 
 .welcome-q2{
@@ -174,11 +186,17 @@
     left: 50%;
     height: 20vh;
     aspect-ratio: 1/1;
-    background-color:chocolate;
+    
     border-top-right-radius: 100%;
     transition: .4s;
     animation: float-in-2 .5s;
     border: 1px solid black;
+}
+
+.welcome-q2:hover{
+    transition: .7s;
+    background-color: var(--projectsColor);
+    cursor: pointer;
 }
 
 .welcome-q2:focus{
@@ -187,6 +205,8 @@
     left: 85%;
     top: -25%;
     border-radius: 50%;
+    background-color: var(--projectsColor);
+    cursor:default;
 }
 
 .welcome-q3{
@@ -195,11 +215,17 @@
     top: 50%;
     height: 20vh;
     aspect-ratio: 1/1;
-    background-color:darkgreen;
+    
     border-bottom-right-radius: 100%;
     transition: .4s;
     animation: float-in-3 .5s;
     border: 1px solid black;
+}
+
+.welcome-q3:hover{
+    transition: .7s;
+    background-color: var(--secretColor);
+    cursor: pointer;
 }
 
 .welcome-q3:focus{
@@ -208,6 +234,8 @@
     left: 85%;
     top: 75%;
     border-radius: 50%;
+    background-color: var(--secretColor);
+    cursor:default;
 }
 
 .welcome-q4{

@@ -3,8 +3,10 @@ import headshot from "../../assets/images/headshotCrop.jpg";
 import homeIcon from "../../assets/images/houseIcon.png";
 import toolsIcon from "../../assets/images/toolsIcon.png";
 import topSecretIcon from "../../assets/images/topSecretIcon.png";
+import citLogo from "../../assets/images/citLogo.png"
 
 import ReactCurvedText from "react-curved-text";
+import {isMobile} from 'react-device-detect';
 
 import "../../assets/css/welcomePage.css"
 
@@ -14,10 +16,15 @@ const WelcomePage = () => {
   const [quadText, setQuadText] = useState([0, 0, 0, 0, 0, "null", true, 0])
 
   const handleFocus = (e) => {
+    if (!isMobile){
+      //allows the text to still be visible for 
+      setQuadText([0,0,0,0,0,"", false, "0"])
+    }
+   
     console.log(e.target.className)
     const nameClass = e.target.className
     const suffix = nameClass.slice(nameClass.length-2)
-    setIcon(suffix)
+    setIcon(suffix);
   }
 
   const handleBlur = (e) => {
@@ -26,7 +33,9 @@ const WelcomePage = () => {
 
   const handleHover = (e, activeIcon) => {
     //word state unchanged & not visible if icon state is truthy
-    if (!activeIcon){
+    const nameClass = e.target.className
+    const suffix = nameClass.slice(nameClass.length-2)
+    if (suffix != activeIcon){
       switch (e.target.className) {
       case "welcome-q1":
         setQuadText([120, 125, 100, 100, 45, "HOME", true, "-20"])
@@ -47,11 +56,10 @@ const WelcomePage = () => {
       default:
         break;
     }
-    }
-    
+    }    
   }
   const handleExit = (e) => {
-    setQuadText([0,0,0,0,0,""])
+    setQuadText([0,0,0,0,0,"", false, "0"])
   }
 
   return (
@@ -72,19 +80,37 @@ const WelcomePage = () => {
           tspanProps={{"dy": quadText[7]}}
         />
         <div className='welcome-outer-circle'>
-          <button className='welcome-q1' onMouseEnter={(e) => handleHover(e, icon)} onMouseLeave={(e) => handleExit(e)} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} >
-          
+          <button className='welcome-q1' 
+            onMouseEnter={(e) => handleHover(e, icon)} 
+            onMouseLeave={(e) => handleExit(e)} 
+            onFocus={(e) => handleFocus(e)} 
+            onBlur={(e) => handleBlur(e)} 
+          >
             {icon == "q1" ? <img className='welcome-icon-img' src={homeIcon} alt='house icon from flaticon by Kiranshastry'></img>: null}
           </button>
           
-          <button className='welcome-q2' onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} >
+          <button className='welcome-q2'
+            onMouseEnter={(e) => handleHover(e, icon)} 
+            onMouseLeave={(e) => handleExit(e)} 
+            onFocus={(e) => handleFocus(e)} 
+            onBlur={(e) => handleBlur(e)} 
+          >
             {icon == "q2" ? <img className='welcome-icon-img' src={toolsIcon} alt='house icon from flaticon'></img>: null}
           </button>
 
-          <button className='welcome-q3' onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} >
+          <button className='welcome-q3' 
+            onMouseEnter={(e) => handleHover(e, icon)} 
+            onMouseLeave={(e) => handleExit(e)} 
+            onFocus={(e) => handleFocus(e)} 
+            onBlur={(e) => handleBlur(e)} 
+          >
             {icon == "q3" ? <img className='welcome-icon-img' src={topSecretIcon} alt='top-secret folder icon from flaticon by Good Ware'></img>: null}
           </button>
-          <button className='welcome-q4' onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} ></button>
+          <button className='welcome-q4' 
+          onFocus={(e) => handleFocus(e)} 
+          onBlur={(e) => handleBlur(e)} >
+            {icon == "q4" ? <img className='welcome-icon-img' src={citLogo} alt='camintech blog logo'></img>: null}
+          </button>
         </div>
         <img src={headshot} alt="camille's headshot" className='welcome-headshot' />
       </div>

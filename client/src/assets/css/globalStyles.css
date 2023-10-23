@@ -1,6 +1,12 @@
 :root {
     --homeColor: rgb(27, 226, 127);
-    --projectsColor: rgb(235, 162, 45);
-    --secretColor: rgb(78, 185, 227);
+    --projectsColor: rgb(244, 174, 61);
+    --secretColor: rgb(69, 164, 201);
     --iconShadow: #dc143c;
+    --blogColor: #ffdaad;
+    --whiteCol: #FFF;
+}
+body{
+    background-color: rgb(47, 47, 47);
+    color: azure;
 }

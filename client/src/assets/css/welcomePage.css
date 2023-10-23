@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+.welcome-curved-text{
+    color: #faebd7;
+}
+
 .welcome-headshot-container{
     height: 70vh;
     display: flex;
@@ -134,8 +138,7 @@
     }
 }
 
- /* END OF ANIMATION SECTION  */
-
+/* END OF ANIMATION SECTION  */
 
 .welcome-icon-img{
     transition-property: 1s;
@@ -250,12 +253,20 @@
     border: 1px solid black;
 }
 
+.welcome-q4:hover{
+    transition: .7s;
+    background-color: var(--blogColor);
+    cursor: pointer;
+}
+
 .welcome-q4:focus{
     animation: float-out-4 .5s;
     transition: .4s;
     left: -35%;
     top: 75%;
     border-radius: 50%;
+    cursor: default;
+    background-color: var(--blogColor);
 }
 
 .welcome-headshot{

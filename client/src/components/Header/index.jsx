@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
-import styled from "styled-components"
-import "../../assets/css/navBarStyles.css"
+import React, { useState } from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
+import styled from "styled-components";
+import "../../assets/css/navBarStyles.css";
+import { SidebarData } from '../Sidebar';
 
-const NavBarContainer = styled.div
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from 'react-icons/ai';
+
+import { IconContext } from 'react-icons';
+
+import cfLogo from "../../assets/images/cflogo.svg"
 
 const Header = () => {
 
@@ -14,28 +20,37 @@ const Header = () => {
     desktop: 2024
   }
 
-  const [sidebar, setSidebar] =useState()
+  const [sidebar, setSidebar] =useState(false)
   const showSidebar = () => setSidebar(!sidebar)
   
   return (
    
     <>
-    <div>
-      <img src={burgerBar} alt="" />
+    <IconContext.Provider value={{color: "#dc143c"}}>
+    <div className='navbar' id='navbar-id'>
+        <FaIcons.FaBars className='nav-menu-bars' onClick={() => showSidebar()}/>
+        <img src={cfLogo} className='nav-logo'></img>
+        <img src={cfLogo} className='nav-logo'></img>
+        
+      <nav className={sidebar ? 'nav-menu active': 'nav-menu'}>
+        <ul className='nav-menu-items'>
+          <li className='navbar-toggle'>
+            <AiIcons.AiOutlineClose onClick={() => showSidebar()} className='nav-menu-bars'/>
+          </li>
+          {SidebarData.map((item, index)=> {
+            return (
+              <li key={index} className={item.cName}>
+                <NavLink to={item.path}>
+                  {item.icon}
+                  <span className='nav-span'>{item.title}</span>
+                </NavLink>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
     </div>
-    <nav className={sidebar ? 'nav-menu active': 'nav-menu'}>
-      <ul className='nav-menu-items'>
-        <li>
-          <NavLink to="/camille">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/camille/projects">Projects</NavLink>
-        </li>
-        <li>
-          <NavLink to="">Tech Blog</NavLink>
-        </li>
-      </ul>
-    </nav>
+    </IconContext.Provider>
     <Outlet/>
     </>
   )

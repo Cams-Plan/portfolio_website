@@ -120,20 +120,15 @@ const ProjectCard = ({ project }) => {
         
         <div className='project-metadata-container'>
             <div className='project-metadata-item'>
-                <p>{chooseMetadata()}</p>
-                {}
-                <aiIcons.AiFillCheckCircle/>
-                {/* <aiIcons.AiFillCloseCircle/> */}
+                <p>Deployed</p>
+                {chooseMetadata(project.deployed, "deployed")}
             </div>
             <div className='project-metadata-item'>
                 <p>Ongoing</p>
-                <bsIcons.BsArrowRepeat/>
-                {/* <aiIcons.AiFillClockCircle/>
-                <aiIcons.AiFillCheckCircle/> */}
-                {/* <aiIcons.AiFillCloseCircle/> */}
+                {chooseMetadata(project.progress_status, "progress_status")}
             </div>
             <div className='project-metadata-item' >
-                <p>Full Stack</p>
+                <p>{project.project_type}</p>
             </div>
         </div>
     </div>

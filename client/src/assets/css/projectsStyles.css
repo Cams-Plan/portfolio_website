@@ -12,3 +12,24 @@
 .logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.logo.green-glow:hover {
+    filter: drop-shadow(0 0 2em #006C4Daa);
+}
+.logo.purple-glow:hover {
+    filter: drop-shadow(0 0 2em #7700DCaa);
+}
+.logo.yellow-glow:hover {
+    filter: drop-shadow(0 0 2em #FECD4Aaa);
+}
+.logo.red-glow:hover {
+    filter: drop-shadow(0 0 2em #A2375Aaa);
+}
+.logo.grey-glow:hover {
+    filter: drop-shadow(0 0 2em #000000aa);
+}
+.logo.orange-glow:hover {
+    filter: drop-shadow(0 0 2em #EF432Eaa);
+}
+.logo.gold-glow:hover {
+    filter: drop-shadow(0 0 2em #FF9A2Faa);
+}

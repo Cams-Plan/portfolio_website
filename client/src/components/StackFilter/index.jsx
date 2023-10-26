@@ -33,16 +33,16 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar }) => {
     <>
     <div >
         <img src={reactLogo} className="logo react" alt="React logo" />
-        <img src={HTMLLogo} className="logo react" alt="React logo" />
-        <img src={nodeJSLogo} className="logo react" alt="React logo" />
-        <img src={expressJSIcon} className="logo react" alt="React logo" />
-        <img src={jestLogo} className="logo react" alt="React logo" />
-        <img src={vitestLogo} className="logo react" alt="React logo" />
+        <img src={HTMLLogo} className="logo orange-glow" alt="React logo" />
+        <img src={nodeJSLogo} className="logo green-glow" alt="React logo" />
+        <img src={expressJSIcon} className="logo grey-glow" alt="React logo" />
+        <img src={jestLogo} className="logo red-glow" alt="React logo" />
+        <img src={vitestLogo} className="logo yellow-glow" alt="React logo" />
         <img src={dockerLogo} className="logo react" alt="React logo" />
-        <img src={AWSLogo} className="logo react" alt="React logo" />
-        <img src={terraformLogo} className="logo react" alt="React logo" />
+        <img src={AWSLogo} className="logo gold-glow" alt="React logo" />
+        <img src={terraformLogo} className="logo purple-glow" alt="React logo" />
         <img src={postgreSQLLogo} className="logo react" alt="React logo" />
-        <img src={mongoDBLogo} className="logo react" alt="React logo" />
+        <img src={mongoDBLogo} className="logo green-glow" alt="React logo" />
         <img src={pythonIcon} className="logo react" alt="React logo" />
     </div>
     <TechnologiesSelectors/>

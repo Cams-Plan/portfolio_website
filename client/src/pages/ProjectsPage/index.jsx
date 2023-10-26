@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StackFilter } from '../../components'
+import { ProjectCard, StackFilter } from '../../components'
 import "../../assets/css/projectsStyles.css"
 
 const ProjectsPage = () => {
@@ -34,6 +34,7 @@ const ProjectsPage = () => {
     <>
     <div className='page-container'>ProjectsPage</div>
     <StackFilter projectStacks={projectStacks} searchBar={searchBar} setSearchBar={setSearchBar} />
+    <ProjectCard projectStacks={projectStacks} />
     </>
   )
 }

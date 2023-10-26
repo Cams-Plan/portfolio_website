@@ -29,4 +29,5 @@ body{
 
 .page-container{
     animation: fade 1.5s reverse;
+    margin: 2vh 1vw;
 }

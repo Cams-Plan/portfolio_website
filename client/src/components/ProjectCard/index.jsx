@@ -39,7 +39,7 @@ const ProjectCard = ({ projectStacks }) => {
             </div>
             <div className='project-stack-item'>
                 <img src={logos.dockerLogo} alt="" />
-                <p>Jest</p>
+                <p>Docker</p>
             </div>
         </div>
         

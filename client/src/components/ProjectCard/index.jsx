@@ -56,6 +56,9 @@ const ProjectCard = ({ projectStacks }) => {
                 <aiIcons.AiFillCheckCircle/> */}
                 {/* <aiIcons.AiFillCloseCircle/> */}
             </div>
+            <div className='project-metadata-item' >
+                <p>Full Stack</p>
+            </div>
         </div>
     </div>
   )

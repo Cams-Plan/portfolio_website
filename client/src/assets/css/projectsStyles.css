@@ -111,6 +111,7 @@
 .project-metadata-container{
     display: flex;
     justify-content:space-around;
+    flex-wrap: wrap;
 }
 .project-metadata-item{
     display: flex;

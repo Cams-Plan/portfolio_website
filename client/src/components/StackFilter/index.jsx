@@ -4,19 +4,7 @@ import TechnologiesSelectors from '../TechnologiesSelectors'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import reactLogo from "../../assets/images/techLogos/react.svg"
-import HTMLLogo from "../../assets/images/techLogos/HTMLLogo.svg"
-import nodeJSLogo from "../../assets/images/techLogos/nodeJSLogo.svg"
-import expressJSIcon from "../../assets/images/techLogos/expressJSIcon.svg"
-import expressJSLogo from "../../assets/images/techLogos/expressJSLogo.svg"
-import jestLogo from "../../assets/images/techLogos/jestLogo.svg"
-import vitestLogo from "../../assets/images/techLogos/vitestLogo.svg"
-import dockerLogo from "../../assets/images/techLogos/dockerLogo.svg"
-import AWSLogo from "../../assets/images/techLogos/AWSLogo.svg"
-import terraformLogo from "../../assets/images/techLogos/terraformLogo.svg"
-import postgreSQLLogo from "../../assets/images/techLogos/postgreSQLLogo.svg"
-import mongoDBLogo from "../../assets/images/techLogos/mongoDBLogo.svg"
-import pythonIcon from "../../assets/images/techLogos/pythonIcon.svg"
+import * as logos from "../../assets/images/techLogos"
 
 const StackFilter = ({ projectStacks, searchBar, setSearchBar }) => {
 
@@ -66,7 +54,7 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar }) => {
         <img src={mongoDBLogo} className="logo green-glow" alt="React logo" />
         <img src={pythonIcon} className="logo react" alt="React logo" />
     </div> */}
-    <Carousel responsive={responsive}>
+    {/* <Carousel responsive={responsive}>
     <div className='.card'>
         <img src={reactLogo} className="logo react" alt="React logo" />
         <h3>React Projects</h3>
@@ -83,7 +71,7 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar }) => {
         <img src={pythonIcon} className="logo react" alt="React logo" />
         <h3>Python Projects</h3>
     </div>
-    </Carousel>;
+    </Carousel>; */}
     <TechnologiesSelectors/>
     {/* {filteredResults.map((result, index)=> {
         return (<h1 key={index}>hello</h1>)

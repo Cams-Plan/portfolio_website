@@ -1,51 +1,127 @@
 import React from 'react'
 
 import sample from "../../assets/images/projectThumbnails/studyBuddyThumbnail.png"
+import sample1 from "../../assets/images/projectThumbnails/gameTheoryThumbnail.png"
 
 import * as logos from "../../assets/images/techLogos"
 
 import * as aiIcons from "react-icons/ai"
 import * as bsIcons from "react-icons/bs"
 
-const ProjectCard = ({ projectStacks }) => {
+const ProjectCard = ({ project }) => {
+
+    const chooseIcon = (tech) => {
+        switch (tech) {
+            case "AWS":
+                return logos.AWSLogo
+                break;
+
+            case "Docker":
+                return logos.DockerLogo
+                break;
+
+            case "ExpressJS":
+                return logos.ExpressJSLogo
+                break;
+
+            case "HTML":
+                return logos.HTMLLogo
+                break;
+
+            case "Jest":
+                return logos.JestLogo
+                break;
+
+            case "MongoDB":
+                return logos.MongoDBLogo
+                break;
+
+            case "NodeJS":
+                return logos.NodeJSLogo
+                break;
+
+            case "PostgreSQL":
+                return logos.PostgreSQLLogo
+                break;
+
+            case "Python":
+                return logos.PythonLogo
+                break;
+
+            case "React":
+                return logos.ReactLogo
+                break;
+
+            case "Terraform":
+                return logos.TerraformLogo
+                break;
+
+            case "Vitest":
+                return logos.VitestLogo
+                break;
+        
+            default:
+                console.log("not valid")
+                break;
+        }
+    }
+
+    const chooseMetadata = (data, key) => {
+        if (key == "deployed") {
+            switch (data) {
+                case true:
+                    return <aiIcons.AiFillCheckCircle/>
+                    break;
+                
+                case false:
+                    return <aiIcons.AiFillCloseCircle/>
+                    break;
+
+                default:
+                    break;
+            }
+        } else if (key == "progress_status"){
+            switch (data) {
+                case "Done":
+                    return <aiIcons.AiFillCheckCircle/>
+                    break;
+
+                case "In Progress":
+                    return <aiIcons.AiFillClockCircle/>
+                    break;
+                case "Ongoing":
+                    return <bsIcons.BsArrowRepeat/>
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+    }
+
   return (
     <div className='card'>
         <img 
         className='project-card-img'
         src={sample}
         alt={`project`} />
-        <h3>Study App Project</h3>
+        <h3>{project.project_title}</h3>
         
         <div className='project-stacks-container'>
-            <div className='project-stack-item'>
-                <img src={logos.reactLogo} alt="" />
-                <p>React</p>
-            </div>
-            <div className='project-stack-item'>
-                <img src={logos.mongoDBLogo} alt="" />
-                <p>MongoDB</p>
-            </div>
-            <div className='project-stack-item'>
-                <img src={logos.nodeJSLogo} alt="" />
-                <p>NodeJS</p>
-            </div>
-            <div className='project-stack-item'>
-                <img src={logos.expressJSIcon} alt="" />
-                <p>ExpressJS</p>
-            </div>
-            <div className='project-stack-item'>
-                <img src={logos.jestLogo} alt="" />
-                <p>Jest</p>
-            </div>
-            <div className='project-stack-item'>
-                <img src={logos.dockerLogo} alt="" />
-                <p>Docker</p>
-            </div>
+            {project.project_stack.map((technology, index) => {
+                return (
+                    <div className='project-stack-item' key={index}>
+                        <img src={chooseIcon(technology)} alt={`${technology} logo icon representing a technology used in this project`} />
+                        <p>{technology}</p>
+                    </div>
+                )
+            })}
         </div>
         
         <div className='project-metadata-container'>
             <div className='project-metadata-item'>
-                <p>Deployed</p>
+                <p>{chooseMetadata()}</p>
+                {}
                 <aiIcons.AiFillCheckCircle/>
                 {/* <aiIcons.AiFillCloseCircle/> */}
             </div>

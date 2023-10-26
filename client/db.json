@@ -65,5 +65,44 @@
       "technology_title": "NoSQL",
       "technology_type": "backend"
     }
+  ],
+  "projects": [
+    { 
+      "id": 1,
+      "project_title": "Study App Project",
+      "project_name": "Study Buddy",
+      "project_thumbnail": "sample",
+      "project_stack": ["React", "MongoDB", "NodeJS", "ExpressJS", "Jest", "Docker"],
+      "deployed": true,
+      "progress_status": "Done",
+      "project_type": "Full Stack"
+    },
+    {
+      "id": 2,
+      "project_title": "Educational Game Project",
+      "project_thumbnail": "sample1",
+      "project_stack": ["HTML", "JavaScript", "NodeJS", "ExpressJS"],
+      "deployed": false,
+      "progress_status": "Done",
+      "project_type": "Full Stack"
+    },
+    {
+      "id": 3,
+      "project_title": "Connect 4 Mini Project",
+      "project_thumbnail": "sample1",
+      "project_stack": ["HTML", "JavaScript", "CSS"],
+      "deployed": false,
+      "progress_status": "Done",
+      "project_type": "Frontend"
+    },
+    {
+      "id": 4,
+      "project_title": "100 Days of Code Projects",
+      "project_thumbnail": "sample",
+      "project_stack": ["Python"],
+      "deployed": false,
+      "progress_status": "In Progress",
+      "project_type": "Backend"
+    }
   ]
 }

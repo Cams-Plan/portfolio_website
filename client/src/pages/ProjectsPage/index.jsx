@@ -6,6 +6,7 @@ const ProjectsPage = () => {
 
   const [projectStacks, setProjectStacks] = useState("")
   const [searchBar, setSearchBar] = useState("")
+  const [projectDetails, setProjectDetails] = useState([])
 
   //AXIOS REQUESTS
   const getAllTechStacks = async () => {
@@ -25,16 +26,42 @@ const ProjectsPage = () => {
       console.error(error);
     }
   }
+  const getAllProjects = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/projects");
+      
+      if (response.status == 200) {
+        const data = await response.json()
+        console.log(data)
+        setProjectDetails(data)
+
+      }
+      else {
+        return "try error"
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   useEffect(() => {
-    const response = getAllTechStacks()
+    getAllTechStacks()
+    getAllProjects()
   },[])
 
   return (
     <>
     <div className='page-container'>ProjectsPage</div>
     <StackFilter projectStacks={projectStacks} searchBar={searchBar} setSearchBar={setSearchBar} />
-    <ProjectCard projectStacks={projectStacks} />
+    <div className='project-cards-container'>
+      {
+        projectDetails.map((project, index) => {
+          return <ProjectCard project={project} />
+        })
+      }
+    </div>
+    
+    
     </>
   )
 }

@@ -59,12 +59,19 @@
     will-change: transform,transition;
 }
 
+.project-cards-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 320px;
-    margin: auto 1rem;
+    margin: .5rem 1rem;
     text-align: center;
     padding: 1.2% 1.2% 1.2% 1.2%;
+    background-color: #FFF;
 }
 
 .project-card-img{
@@ -87,8 +94,10 @@
 .project-stacks-container{
     display: flex;
     justify-content:center;
+    align-items: start;
     flex-wrap: wrap;
     padding: 2;
+    min-height: 133px;
 }
 
 .project-stacks-container div img+p{

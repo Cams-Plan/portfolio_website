@@ -1,6 +1,6 @@
 import React from 'react'
 
-import sample from "../../assets/images/headshotCrop.jpg"
+import sample from "../../assets/images/projectThumbnails/studyBuddyThumbnail.png"
 
 import * as logos from "../../assets/images/techLogos"
 
@@ -14,7 +14,7 @@ const ProjectCard = ({ projectStacks }) => {
         className='project-card-img'
         src={sample}
         alt={`project`} />
-        <h3>Project Name</h3>
+        <h3>Study App Project</h3>
         
         <div className='project-stacks-container'>
             <div className='project-stack-item'>
@@ -22,8 +22,24 @@ const ProjectCard = ({ projectStacks }) => {
                 <p>React</p>
             </div>
             <div className='project-stack-item'>
-                <img src={logos.pythonIcon} alt="" />
-                <p>React</p>
+                <img src={logos.mongoDBLogo} alt="" />
+                <p>MongoDB</p>
+            </div>
+            <div className='project-stack-item'>
+                <img src={logos.nodeJSLogo} alt="" />
+                <p>NodeJS</p>
+            </div>
+            <div className='project-stack-item'>
+                <img src={logos.expressJSIcon} alt="" />
+                <p>ExpressJS</p>
+            </div>
+            <div className='project-stack-item'>
+                <img src={logos.jestLogo} alt="" />
+                <p>Jest</p>
+            </div>
+            <div className='project-stack-item'>
+                <img src={logos.dockerLogo} alt="" />
+                <p>Jest</p>
             </div>
         </div>
         

@@ -5,17 +5,23 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import * as logos from "../../assets/images/techLogos"
+import { useSearchParams } from 'react-router-dom';
 
 const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList }) => {
 
     const [filteredResults, setFilteredResults] = useState([])
+    const [searchParams, setSearchParams] = useSearchParams({technologies: "all", projectType: "all" });
+
+    const stack = searchParams.get("technologies")
+    const type = searchParams.get("projectType")
 
     const handleChange = (e) => {
-        setSearchBar(e.target.value)
-        const filteredItems = projectStacks.filter((stack)=> stack.technology_title.includes(e.target.value) == true
-        )
-        setFilteredResults(filteredItems)
-        console.log(filteredItems)
+        const items = .filter()
+        // setSearchBar(e.target.value)
+        // const filteredItems = projectStacks.filter((stack)=> stack.technology_title.includes(e.target.value) == true
+        // )
+        // setFilteredResults(filteredItems)
+        // console.log(filteredItems)
     }
 
     const responsive = {
@@ -42,34 +48,11 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList })
     <>
     {/* <div className='stack-slider-container'>
         <img src={reactLogo} className="logo react" alt="React logo" />
-        <img src={HTMLLogo} className="logo orange-glow" alt="React logo" />
-        <img src={nodeJSLogo} className="logo green-glow" alt="React logo" />
-        <img src={expressJSIcon} className="logo grey-glow" alt="React logo" />
-        <img src={jestLogo} className="logo red-glow" alt="React logo" />
-        <img src={vitestLogo} className="logo yellow-glow" alt="React logo" />
-        <img src={dockerLogo} className="logo react" alt="React logo" />
-        <img src={AWSLogo} className="logo gold-glow" alt="React logo" />
-        <img src={terraformLogo} className="logo purple-glow" alt="React logo" />
-        <img src={postgreSQLLogo} className="logo react" alt="React logo" />
-        <img src={mongoDBLogo} className="logo green-glow" alt="React logo" />
-        <img src={pythonIcon} className="logo react" alt="React logo" />
     </div> */}
     {/* <Carousel responsive={responsive}>
     <div className='.card'>
         <img src={reactLogo} className="logo react" alt="React logo" />
         <h3>React Projects</h3>
-    </div>
-    <div>
-        <img src={HTMLLogo} className="logo orange-glow" alt="React logo" />
-        <h3>HTML Projects</h3>
-    </div>
-    <div>
-        <img src={dockerLogo} className="logo react" alt="React logo" />
-        <h3>Docker Projects</h3>
-    </div>
-    <div>
-        <img src={pythonIcon} className="logo react" alt="React logo" />
-        <h3>Python Projects</h3>
     </div>
     </Carousel>; */}
     <div className='project-technologies-selector-container'>

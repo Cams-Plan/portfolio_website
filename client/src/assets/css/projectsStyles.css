@@ -65,6 +65,43 @@
     flex-wrap: wrap;
 }
 
+.project-technologies-selector-container{
+    display: flex;
+    justify-content: center;
+}
+
+.project-metafilter-container{
+    width: 95vw;
+    height: 7vh;
+    background-color: cornsilk;
+    padding: 0 .5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-metafilter-item{
+    font-size: 1.3rem;
+    padding: 3px 8px;
+    width: 100%;
+    background-color: bisque;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+}
+.project-metafilter-item:hover{
+    transition: .35s;
+    background-color: rgb(251, 218, 179);
+    box-shadow: 0 4.5px 8.5px 0 rgba(0, 0, 0, 0.2);
+}
+.project-metafilter-item.filter-active{
+    transition: .35s;
+    background-color: rgb(250, 216, 175);
+    box-shadow: 0 4.5px 8.5px 0 rgba(0, 0, 0, 0.2);
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 320px;

@@ -59,6 +59,14 @@ const ProjectCard = ({ project }) => {
             case "Vitest":
                 return logos.VitestLogo
                 break;
+
+            case "JavaScript":
+                return logos.JavaScriptLogo
+                break;
+
+            case "CSS":
+                return logos.CSSLogo
+                break;
         
             default:
                 console.log("not valid")

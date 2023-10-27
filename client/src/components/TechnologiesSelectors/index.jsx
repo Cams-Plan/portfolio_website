@@ -1,8 +1,15 @@
 import React from 'react'
 
-const TechnologiesSelectors = () => {
+const TechnologiesSelectors = ({ metaFilterList }) => {
+  
   return (
-    <div>TechnologiesSelectors</div>
+    <div className='project-metafilter-container'>
+      {metaFilterList.map((filter, index) => {
+        return <button className='project-metafilter-item '>{filter}
+      </button>
+      })}
+      
+    </div>
   )
 }
 

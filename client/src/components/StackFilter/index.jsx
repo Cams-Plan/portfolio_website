@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import * as logos from "../../assets/images/techLogos"
 
-const StackFilter = ({ projectStacks, searchBar, setSearchBar }) => {
+const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList }) => {
 
     const [filteredResults, setFilteredResults] = useState([])
 
@@ -72,10 +72,13 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar }) => {
         <h3>Python Projects</h3>
     </div>
     </Carousel>; */}
-    <TechnologiesSelectors/>
+    <div className='project-technologies-selector-container'>
+        <TechnologiesSelectors metaFilterList={metaFilterList} />
+    </div>
     {/* {filteredResults.map((result, index)=> {
         return (<h1 key={index}>hello</h1>)
     })} */}
+
     </>
   )
 }

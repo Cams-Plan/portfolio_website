@@ -8,6 +8,10 @@ const ProjectsPage = () => {
   const [searchBar, setSearchBar] = useState("")
   const [projectDetails, setProjectDetails] = useState([])
 
+  const metaData = ["Full Stack", "Frontend", "Backend", "Cloud", "DevOps", "Testing"]
+
+  const [metaFilterList, setMetaFilterList] = useState(metaData)
+
   //AXIOS REQUESTS
   const getAllTechStacks = async () => {
     try {
@@ -52,7 +56,7 @@ const ProjectsPage = () => {
   return (
     <>
     <div className='page-container'>ProjectsPage</div>
-    <StackFilter projectStacks={projectStacks} searchBar={searchBar} setSearchBar={setSearchBar} />
+    <StackFilter projectStacks={projectStacks} searchBar={searchBar} setSearchBar={setSearchBar} metaFilterList={metaFilterList} />
     <div className='project-cards-container'>
       {
         projectDetails.map((project, index) => {

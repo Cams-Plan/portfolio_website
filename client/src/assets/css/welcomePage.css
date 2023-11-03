@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 .welcome-curved-text{
-    color: #faebd7;
+    /* color: #faebd7; */
+    color: #935b12;
 }
 
 .welcome-headshot-container{

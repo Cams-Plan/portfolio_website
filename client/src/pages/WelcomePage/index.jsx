@@ -120,7 +120,7 @@ const WelcomePage = () => {
           text={quadText[5]}
           reversed={quadText[6]}
           textProps={{ style: { fontSize: 17, transition: 'opacity 2s', fontFamily: 'Poppins', fontWeight: 400} }}
-          textPathProps={{fill: "#faebd7"}}
+          textPathProps={{fill: "#935b12"}}
           tspanProps={{"dy": quadText[7]}}
           svgProps={{className: "welcome-curved-text"}}
         />

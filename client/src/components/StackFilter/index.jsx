@@ -7,16 +7,13 @@ import "react-multi-carousel/lib/styles.css";
 import * as logos from "../../assets/images/techLogos"
 import { useSearchParams } from 'react-router-dom';
 
-const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList }) => {
+const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList, setSearchParams }) => {
 
     const [filteredResults, setFilteredResults] = useState([])
-    const [searchParams, setSearchParams] = useSearchParams({technologies: "all", projectType: "all" });
-
-    const stack = searchParams.get("technologies")
-    const type = searchParams.get("projectType")
+    
 
     const handleChange = (e) => {
-        const items = .filter()
+        // const items = .filter()
         // setSearchBar(e.target.value)
         // const filteredItems = projectStacks.filter((stack)=> stack.technology_title.includes(e.target.value) == true
         // )
@@ -56,7 +53,7 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList })
     </div>
     </Carousel>; */}
     <div className='project-technologies-selector-container'>
-        <TechnologiesSelectors metaFilterList={metaFilterList} />
+        <TechnologiesSelectors metaFilterList={metaFilterList} setSearchParams={setSearchParams} />
     </div>
     {/* {filteredResults.map((result, index)=> {
         return (<h1 key={index}>hello</h1>)

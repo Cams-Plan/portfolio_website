@@ -9,9 +9,7 @@ const ProjectsPage = () => {
   const [searchBar, setSearchBar] = useState("")
   const [projectDetails, setProjectDetails] = useState([])
 
-  const metaData = ["Full Stack", "Frontend", "Backend", "Cloud", "DevOps", "Testing"]
-
-  const [metaFilterList, setMetaFilterList] = useState(metaData)
+  const metaFilterList = ["Full Stack", "Frontend", "Backend", "Cloud", "DevOps", "Testing"]
 
   const [searchParams, setSearchParams] = useSearchParams({technologies: "all", projectType: "all" });
 
@@ -54,6 +52,25 @@ const ProjectsPage = () => {
     }
   }
 
+  const filterResults = (projectDetails, stack, type) => {
+
+    let filtered;
+    if (stack == "all" && type != "all") {
+      filtered = projectDetails.filter((item)=> {
+        return type.includes(item.project_type)
+      }).map((item) => {
+        return <ProjectCard project={item} key={item.id}/>
+      })
+
+      return filtered.length == 0 ? <p>{'No projects yet for this filter...\n\n But I\'m working on it 👩🏾‍💻🛠'}</p> : filtered
+    } else {
+      filtered = projectDetails.map((project) => {
+        return <ProjectCard project={project} key={project.id}/>
+      })
+      return filtered
+    }
+
+  }
   useEffect(() => {
     getAllTechStacks()
     getAllProjects()
@@ -62,12 +79,12 @@ const ProjectsPage = () => {
   return (
     <>
     <div className='page-container'>ProjectsPage</div>
-    <StackFilter projectStacks={projectStacks} searchBar={searchBar} setSearchBar={setSearchBar} metaFilterList={metaFilterList} setSearchParams={setSearchParams} />
+    <StackFilter projectStacks={projectStacks} 
+      metaFilterList={metaFilterList} 
+      setSearchParams={setSearchParams} 
+     />
     <div className='project-cards-container'>
-      { 
-        projectDetails.map((project, index) => {
-          return <ProjectCard project={project} />
-        })
+      { filterResults(projectDetails, stack, type)
       }
     </div>
     

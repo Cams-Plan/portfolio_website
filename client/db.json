@@ -3,67 +3,80 @@
     {
       "id": 1,
       "technology_title": "JavaScript",
-      "technology_type": "frontend"
+      "technology_type": "frontend",
+      "logo_title": ""
     },
     {
       "id": 2,
       "technology_title": "HTML",
-      "technology_type": "frontend"
+      "technology_type": "frontend",
+      "logo_title": ""
     },
     {
       "id": 3,
       "technology_title": "Node JS",
-      "technology_type": "backend"
+      "technology_type": "backend",
+      "logo_title": ""
     },
     {
       "id": 4,
       "technology_title": "Express JS",
-      "technology_type": "backend"
+      "technology_type": "backend",
+      "logo_title": ""
     },
     {
       "id": 5,
       "technology_title": "Jest",
-      "technology_type": "testing"
+      "technology_type": "testing",
+      "logo_title": ""
     },
     {
       "id": 6,
       "technology_title": "Vitest",
-      "technology_type": "testing"
+      "technology_type": "testing",
+      "logo_title": ""
     },
     {
       "id": 7,
       "technology_title": "Docker",
-      "technology_type": "devops"
+      "technology_type": "devops",
+      "logo_title": ""
     },
     {
       "id": 8,
       "technology_title": "AWS",
-      "technology_type": "cloud"
+      "technology_type": "cloud",
+      "logo_title": ""
     },
     {
       "id": 9,
       "technology_title": "Terraform",
-      "technology_type": "devops"
+      "technology_type": "devops",
+      "logo_title": ""
     },
     {
       "id": 10,
       "technology_title": "Python",
-      "technology_type": "backend"
+      "technology_type": "backend",
+      "logo_title": ""
     },
     {
       "id": 11,
       "technology_title": "Flask",
-      "technology_type": "backend"
+      "technology_type": "backend",
+      "logo_title": ""
     },
     {
       "id": 12,
       "technology_title": "SQL",
-      "technology_type": "backend"
+      "technology_type": "backend",
+      "logo_title": ""
     },
     {
       "id": 13,
       "technology_title": "NoSQL",
-      "technology_type": "backend"
+      "technology_type": "backend",
+      "logo_title": ""
     }
   ],
   "projects": [

@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import TechnologiesSelectors from '../TechnologiesSelectors'
 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 import * as logos from "../../assets/images/techLogos"
 import { useSearchParams } from 'react-router-dom';
 
-const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList, setSearchParams }) => {
-
-    const [filteredResults, setFilteredResults] = useState([])
-    
+const StackFilter = ({ projectStacks, metaFilterList, setSearchParams }) => { 
 
     const handleChange = (e) => {
         // const items = .filter()
@@ -44,21 +43,17 @@ const StackFilter = ({ projectStacks, searchBar, setSearchBar, metaFilterList, s
     // template for each icon on the filter
     <>
     {/* <div className='stack-slider-container'>
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <img src={logos.ReactLogo} className="logo react" alt="React logo" />
     </div> */}
     {/* <Carousel responsive={responsive}>
     <div className='.card'>
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <img src={logos.ReactLogo} className="logo react" alt="React logo" />
         <h3>React Projects</h3>
     </div>
     </Carousel>; */}
     <div className='project-technologies-selector-container'>
         <TechnologiesSelectors metaFilterList={metaFilterList} setSearchParams={setSearchParams} />
     </div>
-    {/* {filteredResults.map((result, index)=> {
-        return (<h1 key={index}>hello</h1>)
-    })} */}
-
     </>
   )
 }

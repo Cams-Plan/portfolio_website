@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "node index.js",
-    "seed-db": "node db/seed.js",
     "setup-prod-db": "docker run --rm -d -p 9090:27017 --name portfolioSite-db mongo",
-    "start-prod-db": "docker exec -it portfolioSite-db mongosh"
+    "enter-prod-db": "docker exec -it portfolioSite-db mongosh",
+    "seed-db": "node db/seed.js"
   },
   "keywords": [],
   "author": "",

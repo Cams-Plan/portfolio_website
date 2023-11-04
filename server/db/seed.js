@@ -81,6 +81,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "100 Days of Code Projects",
+                project_name: "100 Days of Code Collection",
                 project_thumbnail: "daysOfCodeThumbnail",
                 project_stack: ["Python"],
                 deployed: false,
@@ -89,7 +90,8 @@ const seedDB = async () => {
                 project_url: "https://github.com/Cams-Plan/Programming-Projects/blob/main/README.md#100-days-of-code-main-programming-projects"
             },
             {
-                project_title: "BasketNow Training Mobile App",
+                project_title: "Basketball Training Mobile App",
+                project_name: "BasketNow Mobile Training App",
                 project_thumbnail: "basketNowThumbnail",
                 project_stack: ["React Native"],
                 deployed: false,
@@ -99,6 +101,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "AWS Hosted Tech Blog",
+                project_name: "Cam In Tech Blog",
                 project_thumbnail: "camInTech",
                 project_stack: ["AWS", "Linux CLI", "WordPress"],
                 deployed: true,
@@ -108,6 +111,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "React Native Todo List App",
+                project_name: "React Native Todo List App",
                 project_thumbnail: "reactNativeTodo",
                 project_stack: ["React Native"],
                 deployed: false,
@@ -116,7 +120,8 @@ const seedDB = async () => {
                 project_url: "https://github.com/Cams-Plan/React-Native_Todo_App/tree/progression#react-native-todo-list-mobile-app-"
             },
             {
-                project_title: "WellSpace Mental Wellbeing Web App",
+                project_title: "React & Flask Mental Wellbeing App",
+                project_name: "WellSpace Wellbeing Web App",
                 project_thumbnail: "wellSpaceThumbnail",
                 project_stack: ["React", "Python", "Flask", "0Auth", "Vitest"],
                 deployed: false,
@@ -126,6 +131,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "React Native Game Reviews App",
+                project_name: "React Native Game Reviews App",
                 project_thumbnail: "reactNativeGameReviews",
                 project_stack: ["React Native"],
                 deployed: false,
@@ -135,6 +141,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "Educational Game Project",
+                project_name: "Game Theory Economics Web App",
                 project_thumbnail: "gameTheoryThumbnail.png",
                 project_stack: ["HTML", "JavaScript", "NodeJS", "ExpressJS"],
                 deployed: false,
@@ -144,6 +151,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "Connect 4 GUI Project",
+                project_name: "Connect 4 GUI",
                 project_thumbnail: "connect4Thumbnail",
                 project_stack: ["HTML", "JavaScript", "CSS"],
                 deployed: false,
@@ -153,6 +161,7 @@ const seedDB = async () => {
             },
             {
                 project_title: "Rock Paper Scissors CLI",
+                project_name: "Rock Paper Scissors CLI",
                 project_thumbnail: "rockPaperScissors",
                 project_stack: ["Python"],
                 deployed: false,

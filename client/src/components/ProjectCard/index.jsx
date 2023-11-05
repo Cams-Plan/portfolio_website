@@ -84,11 +84,9 @@ const ProjectCard = ({ project }) => {
             switch (data) {
                 case true:
                     return <aiIcons.AiFillCheckCircle/>
-                    break;
                 
                 case false:
                     return <aiIcons.AiFillCloseCircle/>
-                    break;
 
                 default:
                     break;
@@ -97,14 +95,11 @@ const ProjectCard = ({ project }) => {
             switch (data) {
                 case "Done":
                     return <aiIcons.AiFillCheckCircle/>
-                    break;
 
                 case "In Progress":
                     return < io5Icons.IoBuild/>
-                    break;
                 case "On-Going":
                     return <bsIcons.BsArrowRepeat/>
-                    break;
             
                 default:
                     break;

@@ -1,12 +1,12 @@
 import React from 'react'
 
-import sample from "../../assets/images/projectThumbnails/studyBuddyThumbnail.png"
-import sample1 from "../../assets/images/projectThumbnails/gameTheoryThumbnail.png"
+import * as thumbnails from "../../assets/images/projectThumbnails"
 
 import * as logos from "../../assets/images/techLogos"
 
 import * as aiIcons from "react-icons/ai"
 import * as bsIcons from "react-icons/bs"
+import * as io5Icons from "react-icons/io5"
 
 const ProjectCard = ({ project }) => {
 
@@ -50,7 +50,12 @@ const ProjectCard = ({ project }) => {
 
             case "React":
                 return logos.ReactLogo
-                break;
+
+            case "React Native":
+                return logos.ReactNativeLogo
+
+            case "Linux CLI":
+                return logos.LinuxLogo
 
             case "Terraform":
                 return logos.TerraformLogo
@@ -95,9 +100,9 @@ const ProjectCard = ({ project }) => {
                     break;
 
                 case "In Progress":
-                    return <aiIcons.AiFillClockCircle/>
+                    return < io5Icons.IoBuild/>
                     break;
-                case "Ongoing":
+                case "On-Going":
                     return <bsIcons.BsArrowRepeat/>
                     break;
             
@@ -107,11 +112,36 @@ const ProjectCard = ({ project }) => {
         }
     }
 
+    const chooseThumbnail = (project) => {
+        switch (project) {
+            case "Study App Project":
+                return thumbnails.sample
+
+            case "Educational Game Project":
+                return thumbnails.gameTheoryThumbnail
+
+            case "Basketball Training Mobile App":
+                return thumbnails.basketNowThumbnail
+
+            case "100 Days of Code Projects":
+                return thumbnails.daysOfCodeThumbnail
+
+            case "Connect 4 GUI Project":
+                return thumbnails.connect4Thumbnail
+
+            case "AWS Hosted Tech Blog":
+                return thumbnails.camInTechThumbnail
+
+            default:
+                return thumbnails.florinCountyThumbnail
+
+        }
+    }
   return (
     <div className='card'>
         <img 
         className='project-card-img'
-        src={sample}
+        src={chooseThumbnail(project.project_title)}
         alt={`project`} />
         <h3>{project.project_title}</h3>
         
@@ -132,7 +162,7 @@ const ProjectCard = ({ project }) => {
                 {chooseMetadata(project.deployed, "deployed")}
             </div>
             <div className='project-metadata-item'>
-                <p>Ongoing</p>
+                <p>{project.progress_status}</p>
                 {chooseMetadata(project.progress_status, "progress_status")}
             </div>
             <div className='project-metadata-item' >

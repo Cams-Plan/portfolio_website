@@ -142,7 +142,7 @@ const seedDB = async () => {
             {
                 project_title: "Educational Game Project",
                 project_name: "Game Theory Economics Web App",
-                project_thumbnail: "gameTheoryThumbnail.png",
+                project_thumbnail: "gameTheoryThumbnail",
                 project_stack: ["HTML", "JavaScript", "NodeJS", "ExpressJS"],
                 deployed: false,
                 progress_status: "Done",

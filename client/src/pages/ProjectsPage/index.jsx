@@ -1,3 +1,4 @@
+import.meta.env.VITE_API_URL
 import React, { useEffect, useState } from 'react'
 import { ProjectCard, StackFilter } from '../../components'
 import "../../assets/css/projectsStyles.css"
@@ -19,12 +20,12 @@ const ProjectsPage = () => {
   //AXIOS REQUESTS
   const getAllTechStacks = async () => {
     try {
-      const response = await fetch("http://localhost:3000/stacks");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}projects/stacks`);
       
       if (response.status == 200) {
         const data = await response.json()
         console.log(data)
-        setProjectStacks(data)
+        setProjectStacks(data.response)
 
       }
       else {
@@ -36,12 +37,12 @@ const ProjectsPage = () => {
   }
   const getAllProjects = async () => {
     try {
-      const response = await fetch("http://localhost:3000/projects");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}projects/details`);
       
       if (response.status == 200) {
         const data = await response.json()
         console.log(data)
-        setProjectDetails(data)
+        setProjectDetails(data.response)
 
       }
       else {

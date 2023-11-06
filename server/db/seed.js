@@ -22,11 +22,19 @@ const seedDB = async () => {
                 technology_type: "frontend"
             },
             {
-                technology_title: "Node JS",
+                technology_title: "NodeJS",
                 technology_type: "frontend"
             },
             {
-                technology_title: "Express JS",
+                technology_title: "React",
+                technology_type: "frontend"
+            },
+            {
+                technology_title: "React Native",
+                technology_type: "frontend"
+            },
+            {
+                technology_title: "ExpressJS",
                 technology_type: "frontend"
             },
             {
@@ -62,9 +70,10 @@ const seedDB = async () => {
                 technology_type: "backend"
             },
             {
-                technology_title: "NoSQL",
+                technology_title: "MongoDB",
                 technology_type: "backend"
             }
+            
         ])
 
         console.log("Planting Project Seed")
@@ -123,7 +132,7 @@ const seedDB = async () => {
                 project_title: "React & Flask Mental Wellbeing App",
                 project_name: "WellSpace Wellbeing Web App",
                 project_thumbnail: "wellSpaceThumbnail",
-                project_stack: ["React", "Python", "Flask", "0Auth", "Vitest"],
+                project_stack: ["React", "Python", "Flask", "0Auth", "Vitest", "SQL"],
                 deployed: false,
                 progress_status: "On-Going",
                 project_type: "Full Stack",

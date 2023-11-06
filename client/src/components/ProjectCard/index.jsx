@@ -14,39 +14,36 @@ const ProjectCard = ({ project }) => {
         switch (tech) {
             case "AWS":
                 return logos.AWSLogo
-                break;
 
             case "Docker":
                 return logos.DockerLogo
-                break;
 
             case "ExpressJS":
                 return logos.ExpressJSLogo
-                break;
+
+            case "Flask":
+                return logos.FlaskLogo
+
+            case "0Auth":
+                return logos.OAuthLogo
 
             case "HTML":
                 return logos.HTMLLogo
-                break;
 
             case "Jest":
                 return logos.JestLogo
-                break;
 
             case "MongoDB":
                 return logos.MongoDBLogo
-                break;
 
             case "NodeJS":
                 return logos.NodeJSLogo
-                break;
 
-            case "PostgreSQL":
+            case "SQL":
                 return logos.PostgreSQLLogo
-                break;
 
             case "Python":
                 return logos.PythonLogo
-                break;
 
             case "React":
                 return logos.ReactLogo
@@ -59,22 +56,21 @@ const ProjectCard = ({ project }) => {
 
             case "Terraform":
                 return logos.TerraformLogo
-                break;
 
             case "Vitest":
                 return logos.VitestLogo
-                break;
 
             case "JavaScript":
                 return logos.JavaScriptLogo
-                break;
 
             case "CSS":
                 return logos.CSSLogo
-                break;
+
+            case "WordPress":
+                return logos.WordPressLogo
         
             default:
-                console.log("not valid")
+                // console.log(`${tech} is not valid`)
                 break;
         }
     }
@@ -134,10 +130,12 @@ const ProjectCard = ({ project }) => {
     }
   return (
     <div className='card'>
+        <a href={project.project_url} target='_blank'>
         <img 
         className='project-card-img'
         src={chooseThumbnail(project.project_title)}
         alt={`project`} />
+        </a>
         <h3>{project.project_title}</h3>
         
         <div className='project-stacks-container'>

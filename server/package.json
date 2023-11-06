@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "build": "node index.js",
-    "setup-prod-db": "docker run --rm -d -p 9090:27017 --name portfolioSite-db mongo",
-    "enter-prod-db": "docker exec -it portfolioSite-db mongosh",
+    "setup-db": "docker run --rm -d -p 9090:27017 --name portfolioSite-db mongo",
+    "enter-db": "docker exec -it portfolioSite-db mongosh",
     "seed-db": "node db/seed.js"
   },
   "keywords": [],
